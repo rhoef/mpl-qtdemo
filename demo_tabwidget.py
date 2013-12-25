@@ -9,7 +9,7 @@ from within a thread.
 """
 
 __author__ = 'rudolf.hoefler@gmail.com'
-__copyright__ = 'WTFL'
+__copyright__ = 'LGPL'
 
 
 import sys

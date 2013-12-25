@@ -4,7 +4,7 @@ figurewidgets.py
 """
 
 __author__ = 'rudolf.hoefler@gmail.com'
-__copyright__ = 'WTFL'
+__copyright__ = 'LGPL'
 
 __all__ = ['QNavigationToolbar', 'QFigureWidget', 'QFigureTabWidget']
 
@@ -50,6 +50,8 @@ class QFigureWidget(QtGui.QWidget):
 
 
     def on_key_press(self, event):
+        # sometimes mpl has a weird ideas what oo-programing is.
+        # any could overwrite method by my self
         key_press_handler(event, self.canvas, self.toolbar)
 
 
