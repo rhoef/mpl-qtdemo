@@ -64,3 +64,4 @@ class QFigureTabWidget(QtGui.QTabWidget):
     def add_figure(self, title, figure):
         qfw = QFigureWidget(figure, self)
         self.addTab(qfw, title)
+        self.setCurrentWidget(qfw)
