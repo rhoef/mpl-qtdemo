@@ -16,6 +16,10 @@ import sys
 import sip
 sip.setapi('QString', 2)
 
+from matplotlib import rcParams
+# rcParams['figure.facecolor'] = '1.0'
+
+
 from PyQt4 import QtGui
 from PyQt4 import QtCore
 from qcanvas import *
@@ -26,7 +30,7 @@ class FigureThread(QtCore.QThread):
     figureReady = QtCore.pyqtSignal(str, "PyQt_PyObject")
 
     def run(self):
-        for i in xrange(10):
+        for i in xrange(3):
             fig = agg_figure()
             self.figureReady.emit("tab no. %d" %i, fig)
             self.msleep(100)
