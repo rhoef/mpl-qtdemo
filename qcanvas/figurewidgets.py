@@ -22,6 +22,8 @@ from PyQt4 import QtCore
 class QNavigationToolbar(NavigationToolbar2QT):
     """Custom toolbar that does not insert a newline in the status message."""
 
+    message = QtCore.Signal(str)
+
     def __init__(self, *args, **kw):
         super(QNavigationToolbar, self).__init__(*args, **kw)
 
